@@ -1,0 +1,79 @@
+:root {
+    --body-bkg: #F1ECFF;
+    --app-bkg: #EFF2F4;
+    --input-color: #432000;
+    --input-bkg: #DCE1EB;
+    --btn-color: #FDFDFD;
+    --btn-bkg: #AC485A;
+    --btn-radius: .5rem;
+    --btn-padding: .75rem 1rem;
+    --btn-f-size: 1.125rem;
+    --btn-line-h: 1.2;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
+    background-color: var(--body-bkg);
+}
+
+body {
+    display: grid;
+    place-content: center;
+    padding: 1rem 0;
+}
+
+input {
+    color: var(--input-color);
+    background-color: var(--input-bkg);
+    
+}
+
+button {
+    color: var(--btn-color);
+    background-color: var(--btn-bkg);
+    border: none;
+}
+
+/*app styles*/
+#app-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    row-gap: 1rem;
+    width: 400px;
+    background: var(--app-bkg);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    border: 3px solid black;
+    min-height: 400px;
+}
+
+#app-img {
+    width: 150px;
+    align-self: center;
+}
+
+#input-field,
+#add-button {
+    border: none;
+    text-align: center;
+    padding: var(--btn-padding);
+    border-radius: var(--btn-radius);
+    font-size: var(--btn-f-size);
+    line-height: var(--btn-line-h);
+}
+
+#input-field::placeholder { opacity: .6; }
+
+#add-button {
+    border-radius: var(--btn-radius);
+    padding: var(--btn-padding);
+    font-weight: 300;
+}
