@@ -10,6 +10,7 @@ const dataRef = ref(database, "shoppingList")
 const inputFieldEl = document.getElementById("input-field")
 const addButtonEl = document.getElementById("add-button")
 const shopList = document.getElementById("shopping-list")
+const boughtList = document.getElementById("bought-list")
 
 onValue(dataRef, function(snapshot) {
     if (snapshot.exists()) {
@@ -45,6 +46,9 @@ function appendItem(x) {
     
     newLi.textContent = itemVal
 
+    newLi.addEventListener("click", function() {
+        boughtList.append(newLi)
+    })
     newLi.addEventListener("dblclick", function() {
         let itemLocation = ref(database, `shoppingList/${itemID}`)
         remove(itemLocation)

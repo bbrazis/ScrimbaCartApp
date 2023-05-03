@@ -1,18 +1,26 @@
 :root {
-    --body-bkg: #F1ECFF;
     --app-bkg: #EFF2F4;
+
     --input-color: #432000;
     --input-bkg: #DCE1EB;
+
     --btn-color: #FDFDFD;
     --btn-bkg: #AC485A;
     --btn-radius: .5rem;
     --btn-padding: .75rem 1rem;
     --btn-f-size: 1.125rem;
     --btn-line-h: 1.2;
+
     --list-item-bkg: #fffdf8;
     --list-item-shadow: 0 1px 4px rgba(0,0,0,.2);
+
     --btn-hover: #432000;
     --list-item-hover: #ffecc7;
+
+    --bought-list-bkg: grey;
+    --bought-list-color: white;
+
+    --bought-list-hover: black;
 }
 
 * {
@@ -95,7 +103,8 @@ button {
 
 #add-button:hover { background: var(--btn-hover); cursor: pointer; }
 
-#shopping-list {
+#shopping-list,
+#bought-list {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -107,7 +116,8 @@ button {
     text-align: center;
 }
 
-#shopping-list li {
+#shopping-list li,
+#bought-list li {
     flex-grow: 1;
     background-color: var(--list-item-bkg);
     box-shadow: var(--list-item-shadow);
@@ -127,3 +137,10 @@ button {
     color: var(--input-color);
     font-style: italic;
 }
+
+#bought-list li {
+    background: var(--bought-list-bkg);
+    color: var(--bought-list-color);
+}
+
+#bought-list li:hover { background: var(--bought-list-hover); cursor: pointer; }
