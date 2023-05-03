@@ -57,7 +57,7 @@ function appendItem(x) {
         }
     })
 
-    deleteEl.addEventListener("dblclick", function() {
+    deleteEl.addEventListener("click", function() {
         let itemLocation = ref(database, `shoppingList/${itemID}`)
         remove(itemLocation)
     })
