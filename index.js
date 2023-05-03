@@ -45,7 +45,7 @@ function appendItem(x) {
     let itemVal = x[1]
     let newLi = document.createElement("li")
     
-    newLi.innerHTML = `${itemVal}<button class="delete-btn" aria-label="delete item">x</button>`
+    newLi.innerHTML = `${itemVal}<button class="delete-btn" aria-label="delete item">X</button>`
 
     newLi.addEventListener("click", function() {
         let parentID = newLi.parentNode.id
