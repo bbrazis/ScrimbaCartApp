@@ -47,6 +47,7 @@ function appendItem(x) {
     
     newLi.innerHTML = `${itemVal}<button class="delete-btn" aria-label="delete item">X</button>`
 
+    let deleteEl = newLi.lastChild
     newLi.addEventListener("click", function() {
         let parentID = newLi.parentNode.id
         if (parentID === "shopping-list") {
@@ -56,7 +57,7 @@ function appendItem(x) {
         }
     })
 
-    newLi.addEventListener("dblclick", function() {
+    deleteEl.addEventListener("dblclick", function() {
         let itemLocation = ref(database, `shoppingList/${itemID}`)
         remove(itemLocation)
     })
