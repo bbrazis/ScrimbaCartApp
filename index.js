@@ -48,7 +48,7 @@ function appendItem(x) {
 
     newLi.textContent = itemVal
 
-    newLi.addEventListener("click", function() {
+    newLi.addEventListener("dblclick", function() {
         let itemLocation = ref(database, `shoppingList/${itemID}`)
         remove(itemLocation)
     })
