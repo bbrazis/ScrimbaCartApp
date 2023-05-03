@@ -32,6 +32,12 @@ body {
     place-content: center;
 }
 
+h1 {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
 input {
     color: var(--input-color);
     background-color: var(--input-bkg);

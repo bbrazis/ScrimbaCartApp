@@ -23,7 +23,7 @@ onValue(dataRef, function(snapshot) {
             appendItem(currentItem)
         }
     } else {
-        shopList.innerHTML = "No items to buy!"
+        shopList.innerHTML = `<p style="display:block; width:100%; text-align:center;">No items to buy!</p>`
     }
 })
 
