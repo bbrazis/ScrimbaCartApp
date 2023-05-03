@@ -30,7 +30,6 @@ html, body {
 body {
     display: grid;
     place-content: center;
-    padding: 1rem 0;
 }
 
 input {
@@ -55,9 +54,7 @@ button {
     max-width: 320px;
     background: var(--app-bkg);
     padding: 1.5rem;
-    border-radius: 1rem;
-    border: 3px solid black;
-    min-height: 400px;
+    min-height: 440px;
 }
 
 #app-img {
