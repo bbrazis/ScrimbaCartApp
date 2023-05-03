@@ -50,9 +50,9 @@ function appendItem(x) {
     deleteBtn.setAttribute("aria-label","delete item")
     checkBtn.textContent = "✓"
     deleteBtn.textContent = "☓"
-    let liContent = `${itemVal}${checkBtn}${deleteBtn}`
+    //let liContent = `${itemVal}${checkBtn}${deleteBtn}`
     
-    newLi.innerHTML = liContent
+    newLi.innerHTML = `${itemVal}${checkBtn}${deleteBtn}`
 
     newLi.addEventListener("dblclick", function() {
         let itemLocation = ref(database, `shoppingList/${itemID}`)
