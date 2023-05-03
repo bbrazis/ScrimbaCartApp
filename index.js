@@ -48,6 +48,7 @@ function appendItem(x) {
 
     newLi.addEventListener("click", function() {
         let parentID = newLi.parentNode.id
+        console.log(parentID)
         if (parentID === "shopping-list") {
             shopList.append(newLi)
         } else if (parentID === "bought-list") {
