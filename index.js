@@ -44,12 +44,11 @@ function appendItem(x) {
     let itemID = x[0]
     let itemVal = x[1]
     let newLi = document.createElement("li")
-    let parentID = newLi.parentNode.id
     
     newLi.innerHTML = `${itemVal}<button class="delete-btn" aria-label="delete item">x</button>`
 
     newLi.addEventListener("click", function() {
-        
+        let parentID = newLi.parentNode.id
         if (parentID === "shopping-list") {
             boughtList.append(newLi)
         } else if (parentID === "bought-list") {
