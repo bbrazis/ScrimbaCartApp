@@ -36,6 +36,8 @@ h1 {
     padding: 0;
     margin: 0;
     text-align: center;
+    font-weight: 500;
+    font-size: 3rem;
 }
 
 input {
@@ -57,7 +59,7 @@ button {
     justify-content: center;
     align-items: stretch;
     row-gap: 1rem;
-    max-width: 320px;
+    max-width: 375px;
     background: var(--app-bkg);
     padding: 1.5rem;
     min-height: 440px;
@@ -94,6 +96,7 @@ button {
 #shopping-list {
     list-style: none;
     padding: 0;
+    margin: 0;
     font-size: 1.2rem;
     display: flex;
     flex-wrap: wrap;
@@ -113,3 +116,12 @@ button {
 }
 
 #shopping-list li:hover { background: var(--list-item-hover); cursor: pointer; }
+
+.empty-list {
+    text-align: center;
+    display: block;
+    width: 100%;
+    font-size: 1.3rem;
+    color: var(--input-color);
+    font-style: italic;
+}
