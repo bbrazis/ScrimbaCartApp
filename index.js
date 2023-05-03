@@ -30,19 +30,7 @@ onValue(dataRef, function(snapshot) {
 addButtonEl.addEventListener("click", function() {
     let inputValue = inputFieldEl.value
     if (inputValue) {
-        let valueArr = inputValue.split(" ")
-
-        for (let i = 0; i < valueArr.length; i++) {
-            let value = valueArr[i]
-            let firstLetter = value[0].toUpperCase()
-            let remainder = value.slice(1).toLowerCase()
-            valueArr[i] = firstLetter + remainder
-        }
-        let newValue = valueArr.join(" ")
-        push(dataRef, newValue)
-        clearInput()
-
-        console.log(`${newValue} added to database`)
+        autoCap(inputValue)
     }
 })
 
@@ -67,4 +55,20 @@ function appendItem(x) {
 
 function clearList() {
     shopList.innerHTML = ""
+}
+
+function autoCap(x) {
+    let valueArr = x.split(" ")
+
+    for (let i = 0; i < valueArr.length; i++) {
+        let value = valueArr[i]
+        let firstLetter = value[0].toUpperCase()
+        let remainder = value.slice(1).toLowerCase()
+        valueArr[i] = firstLetter + remainder
+    }
+    let newValue = valueArr.join(" ")
+    push(dataRef, newValue)
+    clearInput()
+
+    console.log(`${newValue} added to database`)
 }
