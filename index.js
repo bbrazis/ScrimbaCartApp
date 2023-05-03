@@ -34,8 +34,7 @@ addButtonEl.addEventListener("click", function() {
 
         for (let i = 0; i < valueArr.length; i++) {
             let value = valueArr[i]
-            let valueIndexNumber = value.length - 1
-            let firstLetter = value.slice( -(valueIndexNumber) ).toUpperCase()
+            let firstLetter = value[0].toUpperCase()
             let remainder = value.slice(1).toLowerCase()
             valueArr[i] = firstLetter + remainder
         }
