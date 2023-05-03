@@ -111,7 +111,7 @@ button {
     font-size: 1rem;
     line-height: 1;
     position: absolute;
-    inset: 50% .25rem auto auto;
+    inset: 50% .5rem auto auto;
     transform: translateY(-50%);
 }
 
@@ -136,7 +136,7 @@ button {
     flex-grow: 1;
     background-color: var(--list-item-bkg);
     box-shadow: var(--list-item-shadow);
-    padding: 1rem 2rem 1rem 1rem;
+    padding: 1rem 2.5rem 1rem 1rem;
     border-radius: .45rem;
     color: var(--input-color);
     transition: background 300ms ease;
