@@ -25,6 +25,7 @@ onValue(dataRef, function(snapshot) {
         }
     } else {
         shopList.innerHTML = `<p class="empty-list">No items to buy!</p>`
+        boughtList.innerHTML = ""
     }
 })
 
@@ -43,11 +44,11 @@ function appendItem(x) {
     let itemID = x[0]
     let itemVal = x[1]
     let newLi = document.createElement("li")
+    let parentID = newLi.parentNode.id
     
-    newLi.textContent = itemVal
+    newLi.innerHTML = `${itemVal}<button class="delete-btn" aria-label="delete item">x</button>`
 
     newLi.addEventListener("click", function() {
-        let parentID = newLi.parentNode.id
         
         if (parentID === "shopping-list") {
             boughtList.append(newLi)
@@ -55,6 +56,7 @@ function appendItem(x) {
             shopList.append(newLi)
         }
     })
+
     newLi.addEventListener("dblclick", function() {
         let itemLocation = ref(database, `shoppingList/${itemID}`)
         remove(itemLocation)
