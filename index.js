@@ -6,7 +6,7 @@ const appSettings = {
 }
 const app = initializeApp(appSettings)
 const database = getDatabase(app)
-const dataRef = ref(database, "items")
+const dataRef = ref(database, "shoppingList")
 const inputFieldEl = document.getElementById("input-field")
 const addButtonEl = document.getElementById("add-button")
 const shopList = document.getElementById("shopping-list")
@@ -49,7 +49,7 @@ function appendItem(x) {
     newLi.textContent = itemVal
 
     newLi,addEventListener("click", function() {
-        let itemLocation = ref(database, `items/${itemID}`)
+        let itemLocation = ref(database, `shoppingList/${itemID}`)
         remove(itemLocation)
     })
 
