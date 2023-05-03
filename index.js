@@ -42,17 +42,8 @@ function appendItem(x) {
     let itemID = x[0]
     let itemVal = x[1]
     let newLi = document.createElement("li")
-    let checkBtn = document.createElement("button")
-    let deleteBtn = document.createElement("button")
-    checkBtn.className = "check-btn"
-    checkBtn.setAttribute("aria-label","item bought")
-    deleteBtn.className = "delete-btn"
-    deleteBtn.setAttribute("aria-label","delete item")
-    checkBtn.textContent = "✓"
-    deleteBtn.textContent = "☓"
-    //let liContent = `${itemVal}${checkBtn}${deleteBtn}`
     
-    newLi.innerHTML = `${itemVal}${checkBtn}${deleteBtn}`
+    newLi.textContent = itemVal
 
     newLi.addEventListener("dblclick", function() {
         let itemLocation = ref(database, `shoppingList/${itemID}`)
