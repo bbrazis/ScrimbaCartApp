@@ -47,7 +47,12 @@ function appendItem(x) {
     newLi.textContent = itemVal
 
     newLi.addEventListener("click", function() {
-        boughtList.append(newLi)
+        let parentID = newLi.parentNode.id
+        if (parentID === "shopping-list") {
+            shopList.append(newLi)
+        } else if (parentID === "bought-list") {
+            boughtList.append(newLi)
+        }
     })
     newLi.addEventListener("dblclick", function() {
         let itemLocation = ref(database, `shoppingList/${itemID}`)
