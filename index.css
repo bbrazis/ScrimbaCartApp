@@ -9,6 +9,10 @@
     --btn-padding: .75rem 1rem;
     --btn-f-size: 1.125rem;
     --btn-line-h: 1.2;
+    --list-item-bkg: #fffdf8;
+    --list-item-shadow: 0 1px 4px rgba(0,0,0,.2);
+    --btn-hover: #432000;
+    --list-item-hover: #ffecc7;
 }
 
 * {
@@ -19,7 +23,8 @@ html, body {
     margin: 0;
     padding: 0;
     font-family: 'Rubik', sans-serif;
-    background-color: var(--body-bkg);
+    background-color: var(--app-bkg);
+    user-select: none;
 }
 
 body {
@@ -47,7 +52,7 @@ button {
     justify-content: center;
     align-items: stretch;
     row-gap: 1rem;
-    width: 400px;
+    max-width: 320px;
     background: var(--app-bkg);
     padding: 1.5rem;
     border-radius: 1rem;
@@ -58,6 +63,7 @@ button {
 #app-img {
     width: 150px;
     align-self: center;
+    -webkit-user-drag: none;
 }
 
 #input-field,
@@ -68,6 +74,7 @@ button {
     border-radius: var(--btn-radius);
     font-size: var(--btn-f-size);
     line-height: var(--btn-line-h);
+    font-family: 'Rubik', sans-serif;
 }
 
 #input-field::placeholder { opacity: .6; }
@@ -76,4 +83,30 @@ button {
     border-radius: var(--btn-radius);
     padding: var(--btn-padding);
     font-weight: 300;
+    transition: background 300ms ease;
 }
+
+#add-button:hover { background: var(--btn-hover); cursor: pointer; }
+
+#shopping-list {
+    list-style: none;
+    padding: 0;
+    font-size: 1.2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+    align-items: stretch;
+    text-align: center;
+}
+
+#shopping-list li {
+    flex-grow: 1;
+    background-color: var(--list-item-bkg);
+    box-shadow: var(--list-item-shadow);
+    padding: 1rem;
+    border-radius: .45rem;
+    color: var(--input-color);
+    transition: background 300ms ease;
+}
+
+#shopping-list li:hover { background: var(--list-item-hover); cursor: pointer; }
