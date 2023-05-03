@@ -29,12 +29,21 @@ onValue(dataRef, function(snapshot) {
 
 addButtonEl.addEventListener("click", function() {
     let inputValue = inputFieldEl.value
+    if (inputValue) {
+        let valueArr = inputValue.split(" ")
 
-    push(dataRef, inputValue)
+        for (let i = 0; i < valueArr.length; i++) {
+            let value = valueArr[i]
+            let firstLetter = value.slice(-(value.length - 1)).toUpperCase()
+            let remainder = value.slice(1)
+            valueArr[i] = firstLetter + remainder
+        }
+        let newValue = valueArr.join(" ")
+        push(dataRef, newValue)
+        clearInput()
 
-    clearInput()
-
-    console.log(`${inputValue} added to database`)
+        console.log(`${newValue} added to database`)
+    }
 })
 
 function clearInput() {
