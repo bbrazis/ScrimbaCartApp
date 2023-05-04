@@ -142,6 +142,16 @@ button {
     transition: background 300ms ease;
 }
 
+#shopping-list li span,
+#bought-list li span {
+    background-color: var(--list-item-bkg);
+    box-shadow: var(--list-item-shadow);
+    padding: 1rem 2.5rem 1rem 1rem;
+    border-radius: .45rem;
+    color: var(--input-color);
+    transition: background 300ms ease;
+}
+
 #shopping-list li:hover { background: var(--list-item-hover); cursor: pointer; }
 
 .empty-list {
