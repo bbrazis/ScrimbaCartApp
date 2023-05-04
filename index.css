@@ -134,16 +134,11 @@ button {
 #bought-list li {
     position: relative;
     flex-grow: 1;
-    background-color: var(--list-item-bkg);
-    box-shadow: var(--list-item-shadow);
-    padding: 1rem 2.5rem 1rem 1rem;
-    border-radius: .45rem;
-    color: var(--input-color);
-    transition: background 300ms ease;
 }
 
 #shopping-list li span,
 #bought-list li span {
+    width: 100%;
     background-color: var(--list-item-bkg);
     box-shadow: var(--list-item-shadow);
     padding: 1rem 2.5rem 1rem 1rem;
@@ -152,7 +147,7 @@ button {
     transition: background 300ms ease;
 }
 
-#shopping-list li:hover { background: var(--list-item-hover); cursor: pointer; }
+#shopping-list li:hover #shopping-list li span { background: var(--list-item-hover); cursor: pointer; }
 
 .empty-list {
     text-align: center;
@@ -163,9 +158,9 @@ button {
     font-style: italic;
 }
 
-#bought-list li {
+#bought-list li span {
     background: var(--bought-list-bkg);
     color: var(--bought-list-color);
 }
 
-#bought-list li:hover { background: var(--bought-list-hover); cursor: pointer; }
+#bought-list li:hover #bought-list li span { background: var(--bought-list-hover); cursor: pointer; }
