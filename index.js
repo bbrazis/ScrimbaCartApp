@@ -45,10 +45,11 @@ function appendItem(x) {
     let itemVal = x[1]
     let newLi = document.createElement("li")
     
-    newLi.innerHTML = `${itemVal}<button class="delete-btn" aria-label="delete item">X</button>`
+    newLi.innerHTML = `<span>${itemVal}</span><button class="delete-btn" aria-label="delete item">X</button>`
 
     let deleteEl = newLi.lastChild
-    newLi.addEventListener("click", function() {
+    let spanEl = newLi.firstChild
+    spanEl.addEventListener("click", function() {
         let parentID = newLi.parentNode.id
         if (parentID === "shopping-list") {
             boughtList.append(newLi)
