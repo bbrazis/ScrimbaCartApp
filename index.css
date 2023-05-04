@@ -136,6 +136,11 @@ details {
 .instructions {
     font-size: .85rem;
     line-height: 1.5;
+    background: var(--btn-color);
+}
+
+.shop-box:first-of-type {
+    margin-bottom: 1rem;
 }
 
 #shopping-list,
