@@ -68,7 +68,7 @@ button {
 }
 
 details {
-    padding: .5rem;
+    padding: .5rem 0;
     border-bottom: .125rem solid var(--bought-list-bkg);
 }
 
@@ -137,6 +137,7 @@ details {
     font-size: .85rem;
     line-height: 1.5;
     background: var(--btn-color);
+    padding: .25rem .5rem;
 }
 
 .shop-box:first-of-type {
