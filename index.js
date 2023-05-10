@@ -44,12 +44,17 @@ function appendItem(x) {
     let itemID = x[0]
     let itemVal = x[1]
     let newLi = document.createElement("li")
+    let span = document.createElement("span")
+    let button = document.createElement("button")
     
-    newLi.innerHTML = `<span>${itemVal}</span><button class="delete-btn" aria-label="delete item">X</button>`
+    span.append(itemVal)
+    button.setAttribute("class","delete-btn","aria-label","delete item")
+    button.append("X")
+    newLi.append(span, button)    
+    //newLi.innerHTML = `<span>${itemVal}</span><button class="delete-btn" aria-label="delete item">X</button>`
 
-    let deleteEl = newLi.lastChild
-    let spanEl = newLi.firstChild
-    spanEl.addEventListener("click", function() {
+    
+    span.addEventListener("click", function() {
         let parentID = newLi.parentNode.id
         if (parentID === "shopping-list") {
             boughtList.append(newLi)
@@ -58,7 +63,7 @@ function appendItem(x) {
         }
     })
 
-    deleteEl.addEventListener("click", function() {
+    button.addEventListener("click", function() {
         let itemLocation = ref(database, `shoppingList/${itemID}`)
         remove(itemLocation)
     })
