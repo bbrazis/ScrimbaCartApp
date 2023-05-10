@@ -51,9 +51,7 @@ function appendItem(x) {
     button.setAttribute("class","delete-btn")
     button.setAttribute("aria-label", "delete item")
     button.append("X")
-    newLi.append(span, button)    
-    //newLi.innerHTML = `<span>${itemVal}</span><button class="delete-btn" aria-label="delete item">X</button>`
-
+    newLi.append(span, button)
     
     span.addEventListener("click", function() {
         let parentID = newLi.parentNode.id
