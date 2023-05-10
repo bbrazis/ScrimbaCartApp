@@ -46,9 +46,10 @@ function appendItem(x) {
     let newLi = document.createElement("li")
     let span = document.createElement("span")
     let button = document.createElement("button")
-    
+
     span.append(itemVal)
-    button.setAttribute("class","delete-btn","aria-label","delete item")
+    button.setAttribute("class","delete-btn")
+    button.setAttribute("aria-label", "delete item")
     button.append("X")
     newLi.append(span, button)    
     //newLi.innerHTML = `<span>${itemVal}</span><button class="delete-btn" aria-label="delete item">X</button>`
